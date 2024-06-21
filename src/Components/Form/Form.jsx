@@ -12,7 +12,6 @@ const Form = () => {
 
   const generateQrCode = () => {
     if (content !== null) {
-      console.log("qrContent", content);
       toast.success("QR Code Generated Successfully");
       setQrCodeValue(content);
       setTimeout(() => {
