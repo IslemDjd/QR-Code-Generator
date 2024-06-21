@@ -15,13 +15,14 @@ const Qr = ({ qrCodeValue }) => {
       setIsDownloading(true);
       try {
         const dataUrl = await toPng(qrRef.current);
+        console.log(dataUrl);
         const uuid = v4().replace(/-/g, "").substring(0, 7);
         const link = document.createElement("a");
         link.download = `QR-Code-${uuid}.png`;
         link.href = dataUrl;
         link.click();
         setIsDownloading(false);
-        toast.success("QR code image downloaded successfully");
+        toast.success("QR code image Ready to Download");
       } catch (err) {
         console.error("Failed to generate QR code image:", err);
         toast.error("Failed to generate QR code image");
