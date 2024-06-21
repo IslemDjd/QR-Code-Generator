@@ -1,8 +1,12 @@
-
+import { Toaster } from "react-hot-toast";
+import Footer from "./Components/Footer/Footer";
+import Form from "./Components/Form/Form";
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold">Islem Dj</h1>
+      <Form />
+      <Footer />
+      <Toaster position="top-center" reverseOrder={false} />
     </>
   );
 }
